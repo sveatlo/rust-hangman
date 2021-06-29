@@ -1,4 +1,4 @@
-pub struct Guesser {
+pub struct Hangman {
     word: String,
     masked_word: String,
     guessed_letters: Vec<char>,
@@ -7,9 +7,9 @@ pub struct Guesser {
     failed_guesses: i8,
 }
 
-impl Guesser {
-    pub fn new(word: String, allowed_fails: i8) -> Guesser {
-        Guesser {
+impl Hangman {
+    pub fn new(word: String, allowed_fails: i8) -> Hangman {
+        Hangman {
             word: word.clone(),
             allowed_fails,
             used_guesses: 0,
