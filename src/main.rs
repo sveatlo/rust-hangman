@@ -26,8 +26,9 @@ fn main() {
     let game_result = g.play();
 
     println!();
+    println!("{}", word);
     match game_result {
-        Ok(n) => println!("You won in {} tries. The word was *{}*", n, word),
+        Ok(n) => println!("You won in {} tries", n),
         Err(x) => println!("You lost! {}", x),
     }
 }

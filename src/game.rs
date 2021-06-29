@@ -57,6 +57,10 @@ impl Hangman {
                 self.mask_word();
             } else {
                 self.failed_guesses += 1;
+                println!(
+                    "Sorry, no such letter in the word. Tries: {}/{}",
+                    self.failed_guesses, self.allowed_fails
+                );
             }
 
             if self.masked_word == self.word {
